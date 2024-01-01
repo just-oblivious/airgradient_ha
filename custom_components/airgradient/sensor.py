@@ -3,7 +3,7 @@ from __future__ import annotations
 
 from datetime import datetime, timedelta
 
-from .pygradient import SensorData
+from .pygradient.models import SensorData
 
 from homeassistant.components.sensor import (
     SensorDeviceClass,

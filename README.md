@@ -8,7 +8,7 @@
 1. Add a custom repository to HACS:
   - URL: `https://github.com/just-oblivious/airgradient_ha`
   - Type: "Integration"
-2. Install "AirGradient" though HACS;
+2. Install "AirGradient";
 3. Restart Home Assistant'
 4. Continue with device preparation and configuration.
 
