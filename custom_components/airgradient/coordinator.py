@@ -6,7 +6,7 @@ from collections.abc import Awaitable, Callable
 from datetime import datetime
 import logging
 
-from pygradient import SensorAPI, SensorData
+from .pygradient import SensorAPI, SensorData
 
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.update_coordinator import DataUpdateCoordinator
