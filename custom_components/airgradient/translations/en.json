@@ -1,0 +1,50 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "AirGradient Listener",
+        "data": {
+          "port": "Listen port",
+          "description": "Setup the HTTP listener for AirGradient devices."
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "AirGradient is already configured on this port."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "atmp": {
+        "name": "Ambient temperature"
+      },
+      "rhum": {
+        "name": "Relative humidity"
+      },
+      "rco2": {
+        "name": "CO2"
+      },
+      "tvoc_index": {
+        "name": "VOC Index"
+      },
+      "nox_index": {
+        "name": "NOx Index"
+      },
+      "wifi": {
+        "name": "WiFi Signal"
+      },
+      "pm01": {
+        "name": "Concentration PM 1"
+      },
+      "pm02": {
+        "name": "Concentration PM 2.5"
+      },
+      "pm10": {
+        "name": "Concentration PM 10"
+      },
+      "pm003_count": {
+        "name": "PM 0.3 count"
+      }
+    }
+  }
+}
