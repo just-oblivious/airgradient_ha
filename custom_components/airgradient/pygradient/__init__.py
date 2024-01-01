@@ -1,4 +1,4 @@
-from pygradient.models import SensorData
-from pygradient.server import SensorAPI
+from . import SensorData
+from . import SensorAPI
 
 __all__ = ["SensorAPI", "SensorData"]

@@ -5,7 +5,7 @@ from typing import Awaitable, Callable, Set, TypeAlias
 from aiohttp import web
 from pydantic import ValidationError
 
-from pygradient.models import SensorData
+from .models import SensorData
 
 logger = logging.getLogger(__name__)
 
