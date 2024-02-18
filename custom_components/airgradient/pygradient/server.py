@@ -36,7 +36,7 @@ class SensorAPI(object):
         self.callbacks.discard(f)
 
     def unregister_async_callback(self, f: AsyncCallback) -> None:
-        """Register an async callback."""
+        """Unregister an async callback."""
         self.async_callbacks.discard(f)
 
     def serve(self, host: str = "0.0.0.0", port: int = 8088) -> None:
