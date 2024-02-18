@@ -142,9 +142,10 @@ async def async_setup_entry(
     async def new_sensor_callback(sensor_data: SensorData) -> None:
         """Create entities for sensor readings."""
         entities = []
-        for reading, _ in sensor_data.readings:
-            if entity_description := SENSORS.get(reading):
-                entities.append(AirGradientSensorEntity(ag_coordinator, sensor_data, entity_description))
+        for reading, value in sensor_data.readings:
+            if value is not None:
+                if entity_description := SENSORS.get(reading):
+                    entities.append(AirGradientSensorEntity(ag_coordinator, sensor_data, entity_description))
         async_add_entities(entities)
 
     ag_coordinator.register_callback(new_sensor_callback)

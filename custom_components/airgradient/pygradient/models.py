@@ -16,24 +16,23 @@ class PMTH(BaseModel):
     pm01: StrictInt
     pm02: StrictInt
     pm10: StrictInt
-    pm003_count: StrictInt
     atmp: StrictInt | StrictFloat
     rhum: StrictInt | StrictFloat
+    pm003_count: Optional[StrictInt] = None
 
 
 class SensorReading(AG, PMTH):
     """Common sensor readings."""
 
-    rco2: StrictInt
-    tvoc_index: StrictInt
-    nox_index: StrictInt
-
+    rco2: Optional[StrictInt] = None
+    tvoc_index: Optional[StrictInt] = None
+    nox_index: Optional[StrictInt] = None
     channels: Optional[List[PMTH]] = None
 
     @validator("channels", pre=True)
     def init_channels(cls, obj: Dict[str, Dict[str, int | float]]) -> List[PMTH]:
         """Parse individual channels supplied by the Outdoor Monitor with dual PM sensors."""
-        return [PMTH.model_validate(obj["1"]), PMTH.model_validate(obj["2"])]
+        return [PMTH.validate(obj["1"]), PMTH.validate(obj["2"])]
 
 
 class SensorData(BaseModel):
