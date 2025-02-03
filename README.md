@@ -1,5 +1,11 @@
 # Custom Home Assistant integration for AirGradient devices
 
+## PROJECT RETIRED
+
+This project has been retired since AirGradient now has a first-party integration for Home Assistant.
+
+Documentation for the official integration is available [here](https://www.home-assistant.io/integrations/airgradient/).
+
 ## Supported sensors
 
 - AirGradient ONE V9 (ONE-V9)
